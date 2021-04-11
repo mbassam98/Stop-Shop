@@ -15,10 +15,15 @@
         android:background="@drawable/bg_log_in"
         android:gravity="center">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/illustration_log_in" />
+        <com.asura.library.views.PosterSlider
+            android:id="@+id/poster_slider"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:defaultIndicator="circle"
+            app:imageSlideInterval="5000"
+            app:layout_constraintTop_toTopOf="parent"
+            app:hideIndicators="false"
+            app:loopSlides="true" />
     </LinearLayout>
 
     <LinearLayout
