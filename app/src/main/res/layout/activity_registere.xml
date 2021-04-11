@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context=".Register_Activity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Registere "
+            android:textSize="50sp"/>
+
+            <EditText
+                android:id="@+id/edtyourname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:hint="your Name"
+                android:textSize="30sp"/>
+            <EditText
+                android:id="@+id/edtpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="password"
+                android:textSize="30sp"/>
+    <Button
+        android:id="@+id/btnsaveregistere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:text="save"
+        android:textSize="35sp"
+        android:background="@drawable/radius_login_button"/>
+        <Button
+            android:id="@+id/btngotologin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:text="go to login"
+            android:textSize="35sp"
+            android:background="@drawable/radius_login_button"/>
+    </LinearLayout>

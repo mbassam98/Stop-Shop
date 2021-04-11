@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Loge_activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_log_in"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/illustration_log_in" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"
+            android:gravity="center"
+            android:padding="10px"
+            android:text="GET THE BEST COFFEE IN THE TOWN"
+            android:textColor="#8C746A"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnregistere"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"
+            android:layout_weight="1"
+            android:background="@drawable/radius1"
+            android:text="REGISTER"
+            android:textColor="#000000"
+            android:textSize="14sp"/>
+
+        <Button
+            android:id="@+id/btnlogine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"
+            android:layout_weight="1"
+            android:background="@drawable/radius2"
+            android:text="LOG IN"
+            android:textColor="#000000"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyt_facebook"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radius3"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="15dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/facebook_logo"/>
+        <TextView
+            android:layout_marginLeft="8dp"
+            android:textSize="14sp"
+            android:textColor="#4277BC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connect With FaceBook"/>
+    </LinearLayout>
+
+</LinearLayout>
