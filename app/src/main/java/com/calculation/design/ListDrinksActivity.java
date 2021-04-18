@@ -7,8 +7,10 @@ import android.media.Image;
 import android.os.Bundle;
 import android.text.Layout;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 
 public class ListDrinksActivity extends AppCompatActivity {
 
@@ -16,59 +18,33 @@ public class ListDrinksActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_drinks);
-        final ImageView imgbacklogein = findViewById(R.id.imgbacklogein);
-        final LinearLayout lytespresso = findViewById(R.id.lytespresso);
-        final LinearLayout lytcappuccino = findViewById(R.id.lytcappuccino);
-        final LinearLayout lytmacciato = findViewById(R.id.lytmacciato);
-        final LinearLayout lytmocha = findViewById(R.id.lytmocha);
-        final LinearLayout lytlatte = findViewById(R.id.lytlatte);
 
-        imgbacklogein.setOnClickListener(new View.OnClickListener() {
+        final ListView listDrinks = findViewById(R.id.listDrinks);
+
+        String[] productNames = {
+                "Expresso",
+                "Cappuccino",
+                "Mocciato",
+                "Mocha",
+                "Latte",
+        };
+
+        Integer[] productImages = {
+                R.drawable.espresso,
+                R.drawable.cappuccino,
+                R.drawable.macciato,
+                R.drawable.mocha,
+                R.drawable.latte,
+        };
+
+        DrinkListAdapter adapter = new DrinkListAdapter(this, productNames, productImages);
+        listDrinks.setAdapter(adapter);
+
+        listDrinks.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent i = new Intent(ListDrinksActivity.this,Logein_Activity.class);
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent i = new Intent(ListDrinksActivity.this, Latte_Activity.class);
                 startActivity(i);
-            }
-        });
-
-        lytespresso.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(ListDrinksActivity.this,Espresso_Activity.class);
-                startActivity(i);
-
-            }
-        });
-        lytcappuccino.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(ListDrinksActivity.this,Cappuccino_Activity.class);
-                startActivity(i);
-
-            }
-        });
-        lytmacciato.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(ListDrinksActivity.this,Macciato_Activity.class);
-                startActivity(i);
-
-            }
-        });
-        lytmocha.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(ListDrinksActivity.this,Mocha_Activity.class);
-                startActivity(i);
-
-            }
-        });
-        lytlatte.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(ListDrinksActivity.this,Latte_Activity.class);
-                startActivity(i);
-
             }
         });
     }

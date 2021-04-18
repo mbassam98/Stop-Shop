@@ -17,21 +17,18 @@ public class Logein_Activity extends AppCompatActivity {
 
         final EditText edtyourename = findViewById(R.id.edtyourename);
         final EditText edtyourpassword = findViewById(R.id.edtyourpassword);
-        final Button btngotolist = findViewById(R.id.btngotolist);
+        final Button btngotolistdrink = findViewById(R.id.btngotolistdrink);
 
-        btngotolist.setOnClickListener(new View.OnClickListener() {
+        btngotolistdrink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int yourname = Integer.parseInt(edtyourename.getText().toString());
-                int password = Integer.parseInt(edtyourpassword.getText().toString());
+                // int yourname = Integer.parseInt(edtyourename.getText().toString());
+                // int password = Integer.parseInt(edtyourpassword.getText().toString());
 
-                Intent i = new Intent(Logein_Activity.this,ListDrinksActivity.class);
+                Intent i = new Intent(Logein_Activity.this, ListDrinksActivity.class);
                 startActivity(i);
             }
         });
-
-
-
 
     }
 }

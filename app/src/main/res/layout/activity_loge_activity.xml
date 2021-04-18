@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             app:defaultIndicator="circle"
-            app:imageSlideInterval="5000"
+            app:imageSlideInterval="3300"
             app:layout_constraintTop_toTopOf="parent"
             app:hideIndicators="false"
             app:loopSlides="true" />
@@ -56,8 +56,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="20px"
             android:layout_weight="1"
-            android:background="@drawable/radius1"
             android:text="REGISTER"
+            android:backgroundTint="#B98068"
             android:textColor="#000000"
             android:textSize="14sp"/>
 
@@ -84,11 +84,9 @@
         android:padding="15dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/facebook_logo"/>
         <TextView
+            android:drawableLeft="@drawable/facebook_logo"
+            android:drawablePadding="6dp"
             android:layout_marginLeft="8dp"
             android:textSize="14sp"
             android:textColor="#4277BC"

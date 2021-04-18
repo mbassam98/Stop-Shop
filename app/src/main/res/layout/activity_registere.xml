@@ -11,7 +11,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" Registere "
+            android:text="@string/register"
             android:textSize="50sp"/>
 
             <EditText
@@ -20,7 +20,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
-                android:hint="your Name"
+                android:hint="@string/your_name"
                 android:textSize="30sp"/>
             <EditText
                 android:id="@+id/edtpassword"
@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:hint="password"
+                android:hint="@string/password"
                 android:textSize="30sp"/>
     <Button
         android:id="@+id/btnsaveregistere"

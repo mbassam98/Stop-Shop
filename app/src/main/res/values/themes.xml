@@ -20,6 +20,13 @@
 
         <item name="toolbarStyle">@style/CustomToolbarStyle</item>
 
+
+        <item name="materialButtonStyle">@style/Widget.App.Button</item>
+
+    </style>
+
+    <style name="Widget.App.Button" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">#C69A80</item>
     </style>
 
     <style name="CustomToolbarStyle" parent="@style/Widget.AppCompat.Toolbar">
