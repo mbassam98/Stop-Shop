@@ -43,7 +43,7 @@ public class ListDrinksActivity extends AppCompatActivity {
         listDrinks.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent i = new Intent(ListDrinksActivity.this, Latte_Activity.class);
+                Intent i = new Intent(ListDrinksActivity.this,Customize_Drink_Activity.class);
                 startActivity(i);
             }
         });

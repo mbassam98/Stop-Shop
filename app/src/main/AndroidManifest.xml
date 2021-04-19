@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/stop_shop_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design">
+        <activity android:name=".Customize_Drink_Activity"></activity>
         <activity android:name=".Latte_Activity" />
         <activity android:name=".Mocha_Activity" />
         <activity android:name=".Macciato_Activity" />
