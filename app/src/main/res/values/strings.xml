@@ -2,7 +2,34 @@
     <string name="app_name">Stop Shop</string>
     <string name="title_activity_maps">Map</string>
     <string name="login">Log in</string>
-    <string name="your_name">Your Name</string>
     <string name="password">Password</string>
+    <string name="egp_36">36 EGP</string>
+    <string name="txtsize">size</string>
+    <string name="txtsugar">sugar</string>
+    <string name="txtprice2">42 EGP</string>
+    <string name="txtadditions">additions</string>
+    <string name="txttotal">total</string>
+    <string name="txtgetthebestcoffeeinthetown">get the best coffee in the town</string>
+    <string name="btnregistere">Register</string>
+    <string name="btnlogine">LOG IN</string>
+    <string name="txtlogin">log in</string>
+    <string name="Latte">Latte</string>
+    <string name="Mocha">Mocha</string>
+    <string name="Expresso">Expresso</string>
+    <string name="List_Drinks">List_Drinks</string>
+    <string name="Cappuccino">Cappuccino</string>
+    <string name="Macciato">Macciato</string>
+    <string name="edtyourename">your name</string>
+    <string name="connectwithfacebook">connect with face book</string>
+    <string name="edtyourpassword">your password</string>
+    <string name="btngotolistdrink">log in</string>
+    <string name="btnsavetheorder">save the order</string>
+    <string name="btnaddress1">address</string>
+    <string name="preferences">Details</string>
+    <string name="cappuccino">Cappuccino</string>
+    <string name="btnaddress2">address</string>
+    <string name="btnaddtocart">Add To Cart</string>
     <string name="register">Register</string>
+
+
 </resources>

@@ -60,5 +60,12 @@ public class Loge_activity extends AppCompatActivity {
 
             }
         });
+        lyt_facebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Loge_activity.this, MapsActivity.class);
+                startActivity(i);
+            }
+        });
     }
 }

@@ -14,20 +14,19 @@ public class Register_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registere);
-        final EditText edtyourname = findViewById(R.id.edtyourname);
-        final EditText edtpassword = findViewById(R.id.edtpassword);
-        final Button btngotologin = findViewById(R.id.btngotologin);
-        final Button btnsaveregistere = findViewById(R.id.btnsaveregistere);
+        final EditText edtyournames = findViewById(R.id.edtyournames);
+        final EditText edtyourpassworde = findViewById(R.id.edtyourpassworde);
+        final Button btngotologinee = findViewById(R.id.btngotologinee);
 
-     btnsaveregistere.setOnClickListener(new View.OnClickListener() {
+        btngotologinee.setOnClickListener(new View.OnClickListener() {
          @Override
          public void onClick(View v) {
-             int yourname = Integer.parseInt(edtyourname.getText().toString());
-             int password = Integer.parseInt(edtpassword.getText().toString());
+             int yourname = Integer.parseInt(edtyournames.getText().toString());
+             int password = Integer.parseInt(edtyourpassworde.getText().toString());
          }
      });
 
-    btngotologin.setOnClickListener(new View.OnClickListener() {
+    btngotologinee.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
 

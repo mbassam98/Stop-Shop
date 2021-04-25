@@ -8,46 +8,45 @@
         android:gravity="center"
         tools:context=".Register_Activity">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/register"
-            android:textSize="50sp"/>
+    <TextView
+        android:fontFamily="@font/cairo_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="15dp"
+        android:text="@string/register"
+        android:textSize="50sp"
+        android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/edtyourname"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
-                android:hint="@string/your_name"
-                android:textSize="30sp"/>
-            <EditText
-                android:id="@+id/edtpassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:hint="@string/password"
-                android:textSize="30sp"/>
-    <Button
-        android:id="@+id/btnsaveregistere"
+    <EditText
+        android:id="@+id/edtyournames"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="20dp"
+        android:hint="@string/edtyourename"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/edtyourpassworde"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:hint="@string/password"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/btngotologinee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="25dp"
-        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="250dp"
+        android:background="@drawable/radius_login_button"
         android:text="save"
-        android:textSize="35sp"
-        android:background="@drawable/radius_login_button"/>
-        <Button
-            android:id="@+id/btngotologin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginLeft="25dp"
-            android:text="go to login"
-            android:textSize="35sp"
-            android:background="@drawable/radius_login_button"/>
-    </LinearLayout>
+        android:textSize="35sp" />
+</LinearLayout>
