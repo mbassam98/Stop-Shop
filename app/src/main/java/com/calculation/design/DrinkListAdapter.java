@@ -9,33 +9,47 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class DrinkListAdapter  extends ArrayAdapter<String> {
+import java.util.ArrayList;
+
+public class DrinkListAdapter extends ArrayAdapter<Drink> {
 
     private final Activity context;
-    private final String[] productNames;
-    private final Integer[] productImages;
+    private final ArrayList<Drink> drinks;
 
-    public DrinkListAdapter(Activity context, String[] productNames, Integer[] productImages) {
-        super(context, R.layout.drink_layout_item, productNames);
+    public DrinkListAdapter(Activity context, ArrayList<Drink> drinks) {
+        super(context, 0, drinks);
 
-        this.context=context;
-        this.productNames=productNames;
-        this.productImages=productImages;
+        this.context = context;
+        this.drinks = drinks;
 
     }
 
-    public View getView(int position,View view,ViewGroup parent) {
+//    @Override
+//    public int getViewTypeCount() {
+//        return LIST_ITEM_TYPE_COUNT;
+//    }
 
-        LayoutInflater inflater=context.getLayoutInflater();
-        View rowView=inflater.inflate(R.layout.drink_layout_item, null,true);
+    @Override
+    public int getCount() {
+        return drinks.size();
+    }
 
-        ImageView imgProduct = rowView.findViewById(R.id.imgProduct);
-        TextView txtName = rowView.findViewById(R.id.txtName);
+    @Override
+    public View getView(int position, View view, ViewGroup parent) {
 
-        txtName.setText(productNames[position]);
-        imgProduct.setImageResource(productImages[position]);
+        Drink drink = getItem(position);
+        // Check if an existing view is being reused, otherwise inflate the view
+        if (view == null) {
+            view = LayoutInflater.from(getContext()).inflate(R.layout.drink_layout_item, parent, false);
+        }
+        // Lookup view for data population
+        ImageView imgProduct = view.findViewById(R.id.imgProduct);
+        TextView txtName = view.findViewById(R.id.txtName);
+        // Populate the data into the template view using the data object
+        imgProduct.setImageResource(drink.getImage());
+        txtName.setText(drink.getDrink_name());
+        // Return the completed view to render on screen
+        return view;
 
-        return rowView;
-
-    };
+    }
 }

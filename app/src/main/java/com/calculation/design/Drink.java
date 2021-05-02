@@ -4,9 +4,9 @@ public class Drink {
     private int _id;
     private String drink_name;
     private float price;
-    private String image;
+    private Integer image;
 
-    public Drink(int _id, String drink_name, float price, String image) {
+    public Drink(int _id, String drink_name, float price, Integer image) {
         this._id = _id;
         this.drink_name = drink_name;
         this.price = price;
@@ -37,11 +37,16 @@ public class Drink {
         this.price = price;
     }
 
-    public String getImage() {
+    public Integer getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(Integer image) {
         this.image = image;
+    }
+
+    @Override
+    public String toString() {
+        return drink_name;
     }
 }

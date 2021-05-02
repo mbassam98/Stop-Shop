@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+
 public class ListDrinksActivity extends AppCompatActivity {
 
     @Override
@@ -21,23 +23,12 @@ public class ListDrinksActivity extends AppCompatActivity {
 
         final ListView listDrinks = findViewById(R.id.listDrinks);
 
-        String[] productNames = {
-                "Expresso",
-                "Cappuccino",
-                "Mocciato",
-                "Mocha",
-                "Latte",
-        };
+        SQLiteDatabaseAdapter ad = new SQLiteDatabaseAdapter(ListDrinksActivity.this);
+        ad.open();
+        ArrayList<Drink> drinks = ad.getAllDrinks();
+        ad.close();
 
-        Integer[] productImages = {
-                R.drawable.espresso,
-                R.drawable.cappuccino,
-                R.drawable.macciato,
-                R.drawable.mocha,
-                R.drawable.latte,
-        };
-
-        DrinkListAdapter adapter = new DrinkListAdapter(this, productNames, productImages);
+        DrinkListAdapter adapter = new DrinkListAdapter(this, drinks);
         listDrinks.setAdapter(adapter);
 
         listDrinks.setOnItemClickListener(new AdapterView.OnItemClickListener() {
