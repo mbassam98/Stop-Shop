@@ -116,6 +116,22 @@ public class SQLiteDatabaseAdapter {
         return drinks;
     }
 
+    public Drink getDrink(int _id){
+        ArrayList<Drink> drinks =new ArrayList<Drink>();
+        Cursor cursor = database.query("drinks", null, "_id=" + _id, null, null, null, null);
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast()){
+            int id = cursor.getInt(0);
+            String drink_name = cursor.getString(1);
+            float price = cursor.getFloat(2);
+            Integer image = cursor.getInt(3);
+            drinks.add(new Drink(id,drink_name, price,image));
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return drinks.get(0);
+    }
+
     ////////////////////////////////////
 
     public void createOrder( int user_id, int drinks_id, int quantity, String size, String sugger, String additions) {

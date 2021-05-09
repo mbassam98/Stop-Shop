@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Stop Shop</string>
+    <string name="title_activity_maps">الخريطة</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="password">كلمة المرور</string>
+    <string name="egp_36">36 شيكل</string>
+    <string name="txtsize">الحجم</string>
+    <string name="txtsugar">السكر</string>
+    <string name="txtprice2">42 شيكل</string>
+    <string name="txtadditions">اضافات</string>
+    <string name="txttotal">التكلفة</string>
+    <string name="txtgetthebestcoffeeinthetown">احصل على أفضل قهوة في المدينة</string>
+    <string name="btnregistere">انشاء حساب</string>
+    <string name="btnlogine">تسجيل الدخول</string>
+    <string name="connectwithfacebook">ربط مع الفيسبوك</string>
+    <string name="txtlogin">تسجيل الدخول</string>
+    <string name="edtyourename">ادخل اسمك</string>
+    <string name="edtyourpassword">كلمة المرور</string>
+    <string name="btngotolistdrink">تسجيل</string>
+    <string name="btnsavetheorder">تثبيت اللطلبية</string>
+    <string name="btnaddress1">العنوان</string>
+    <string name="btnaddress2">تفاصيل العنوان</string>
+    <string name="preferences">التفاصيل</string>
+    <string name="cappuccino">كابوتشينو</string>
+    <string name="btnaddtocart">اضافة الى سلة المشتريات</string>
+    <string name="register">إنشاء حساب</string>
+    <string name="Latte">قهوة لاتيه</string>
+    <string name="Mocha">موتشا</string>
+    <string name="Cappuccino">كابوتشينو</string>
+    <string name="Macciato">ماكياتو</string>
+    <string name="Expresso">اسبريسو</string>
+    <string name="List_Drinks">قائمة المشروبات</string>
+</resources>

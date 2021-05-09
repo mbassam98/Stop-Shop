@@ -34,7 +34,9 @@ public class ListDrinksActivity extends AppCompatActivity {
         listDrinks.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent i = new Intent(ListDrinksActivity.this,Customize_Drink_Activity.class);
+                Drink d = drinks.get(position);
+                Intent i = new Intent(ListDrinksActivity.this, Customize_Drink_Activity.class);
+                i.putExtra("id", d.get_id());
                 startActivity(i);
             }
         });

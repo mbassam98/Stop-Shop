@@ -2,21 +2,32 @@ package com.calculation.design;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Customize_Drink_Activity extends AppCompatActivity {
+
+    public double calculateTotalPrice(int quantity, double price) {
+
+        return quantity * price;
+    }
+
+    int quantity = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customize__drink_);
 
-        final ImageView imagebacktolistdrink = findViewById(R.id.imagebacktolistdrink);
         final TextView textquantity = findViewById(R.id.textquantity);
         final ImageButton btnblus = findViewById(R.id.btnblus);
         final ImageButton btnminuse = findViewById(R.id.btnminuse);
@@ -29,29 +40,135 @@ public class Customize_Drink_Activity extends AppCompatActivity {
         final ImageView imgnosuger = findViewById(R.id.imgnosuger);
         final ImageView imgcream = findViewById(R.id.imgcream);
         final ImageView imgother = findViewById(R.id.imgother);
+        final ImageView customsDrinkImage = findViewById(R.id.customsDrinkImage);
         final TextView txtprice1 = findViewById(R.id.txtprice1);
+        final TextView customDrinkName = findViewById(R.id.customDrinkName);
         final TextView txtprice23 = findViewById(R.id.txtprice23);
+        final Button btnaddtocart = findViewById(R.id.btnaddtocart);
+
+        final int id = getIntent().getIntExtra("id", 0);
+        SQLiteDatabaseAdapter ad = new SQLiteDatabaseAdapter(Customize_Drink_Activity.this);
+        ad.open();
+        Drink drink = ad.getDrink(id);
+        ad.close();
+
+        txtprice1.setText(drink.getPrice() + "");
+        customDrinkName.setText(drink.getDrink_name() + "");
+        customsDrinkImage.setImageResource(drink.getImage());
+        textquantity.setText(quantity + "");
+        txtprice23.setText(calculateTotalPrice(quantity, drink.getPrice()) + "");
 
         btnblus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int p = Integer.parseInt(txtprice1.getText().toString());
-                double o = p + 1;
-                textquantity.setText( o + "");
+
+                quantity = quantity + 1;
+                textquantity.setText(quantity + "");
+                txtprice23.setText(calculateTotalPrice(quantity, drink.getPrice()) + "");
             }
         });
-
         btnminuse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int l = Integer.parseInt(txtprice1.getText().toString());
-                double f = l + 1;
-                txtprice1.setText( f + "");
-                txtprice23.setText(f+"");
+                if (quantity == 1) {
+                    return;
+                }
+                quantity = quantity - 1;
+                textquantity.setText(quantity + "");
+                txtprice23.setText(calculateTotalPrice(quantity, drink.getPrice()) + "");
             }
-
-
         });
 
+        smallsize.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                smallsize.setColorFilter(new PorterDuffColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP));
+                medeumsize.setColorFilter(null);
+                bigsize.setColorFilter(null);
+            }
+        });
+        medeumsize.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                smallsize.setColorFilter(null);
+                medeumsize.setColorFilter(new PorterDuffColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP));
+                bigsize.setColorFilter(null);
+            }
+        });
+        bigsize.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                smallsize.setColorFilter(null);
+                medeumsize.setColorFilter(null);
+                bigsize.setColorFilter(new PorterDuffColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP));
+            }
+        });
+
+        imgonesuger.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imgonesuger.setColorFilter(new PorterDuffColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP));
+                imgtwosuger.setColorFilter(null);
+                imgthreesuger.setColorFilter(null);
+                imgnosuger.setColorFilter(null);
+            }
+        });
+        imgtwosuger.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imgonesuger.setColorFilter(null);
+                imgtwosuger.setColorFilter(new PorterDuffColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP));
+                imgthreesuger.setColorFilter(null);
+                imgnosuger.setColorFilter(null);
+            }
+        });
+        imgthreesuger.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imgonesuger.setColorFilter(null);
+                imgtwosuger.setColorFilter(null);
+                imgthreesuger.setColorFilter(new PorterDuffColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP));
+                imgnosuger.setColorFilter(null);
+            }
+        });
+        imgnosuger.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imgonesuger.setColorFilter(null);
+                imgtwosuger.setColorFilter(null);
+                imgthreesuger.setColorFilter(null);
+                imgnosuger.setColorFilter(new PorterDuffColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP));
+            }
+        });
+
+        imgcream.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imgcream.setColorFilter(new PorterDuffColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP));
+                imgother.setColorFilter(null);
+            }
+        });
+        imgother.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imgcream.setColorFilter(null);
+                imgother.setColorFilter(new PorterDuffColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP));
+            }
+        });
+
+
+        btnaddtocart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int smallPrice = Integer.parseInt(txtprice1.getText().toString());
+                int quantity = Integer.parseInt(textquantity.getText().toString());
+                double bigPrice = smallPrice * quantity;
+
+                txtprice23.setText(bigPrice + "");
+
+                Intent i = new Intent(Customize_Drink_Activity.this, MapsActivity.class);
+                startActivity(i);
+            }
+        });
     }
 }
