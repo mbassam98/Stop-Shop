@@ -30,4 +30,8 @@
     <string name="Macciato">ماكياتو</string>
     <string name="Expresso">اسبريسو</string>
     <string name="List_Drinks">قائمة المشروبات</string>
+
+    <string name="facebook_app_id">159515252722600</string>
+    <string name="fb_login_protocol_scheme">fb159515252722600</string>
+
 </resources>

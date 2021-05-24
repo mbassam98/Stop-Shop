@@ -24,10 +24,6 @@ public class DrinkListAdapter extends ArrayAdapter<Drink> {
 
     }
 
-//    @Override
-//    public int getViewTypeCount() {
-//        return LIST_ITEM_TYPE_COUNT;
-//    }
 
     @Override
     public int getCount() {
@@ -38,17 +34,14 @@ public class DrinkListAdapter extends ArrayAdapter<Drink> {
     public View getView(int position, View view, ViewGroup parent) {
 
         Drink drink = getItem(position);
-        // Check if an existing view is being reused, otherwise inflate the view
         if (view == null) {
             view = LayoutInflater.from(getContext()).inflate(R.layout.drink_layout_item, parent, false);
         }
-        // Lookup view for data population
+
         ImageView imgProduct = view.findViewById(R.id.imgProduct);
         TextView txtName = view.findViewById(R.id.txtName);
-        // Populate the data into the template view using the data object
         imgProduct.setImageResource(drink.getImage());
         txtName.setText(drink.getDrink_name());
-        // Return the completed view to render on screen
         return view;
 
     }

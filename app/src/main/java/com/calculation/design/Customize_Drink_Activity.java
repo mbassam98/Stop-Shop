@@ -86,7 +86,7 @@ public class Customize_Drink_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 size = "small";
-                smallsize.setColorFilter(new PorterDuffColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP));
+                smallsize.setColorFilter(new PorterDuffColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP));
                 medeumsize.setColorFilter(null);
                 bigsize.setColorFilter(null);
             }
@@ -96,7 +96,7 @@ public class Customize_Drink_Activity extends AppCompatActivity {
             public void onClick(View v) {
                 size = "medium";
                 smallsize.setColorFilter(null);
-                medeumsize.setColorFilter(new PorterDuffColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP));
+                medeumsize.setColorFilter(new PorterDuffColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP));
                 bigsize.setColorFilter(null);
             }
         });
@@ -106,7 +106,7 @@ public class Customize_Drink_Activity extends AppCompatActivity {
                 size = "big";
                 smallsize.setColorFilter(null);
                 medeumsize.setColorFilter(null);
-                bigsize.setColorFilter(new PorterDuffColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP));
+                bigsize.setColorFilter(new PorterDuffColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP));
             }
         });
 
@@ -114,7 +114,7 @@ public class Customize_Drink_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 sugger = "one";
-                imgonesuger.setColorFilter(new PorterDuffColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP));
+                imgonesuger.setColorFilter(new PorterDuffColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP));
                 imgtwosuger.setColorFilter(null);
                 imgthreesuger.setColorFilter(null);
                 imgnosuger.setColorFilter(null);
@@ -125,7 +125,7 @@ public class Customize_Drink_Activity extends AppCompatActivity {
             public void onClick(View v) {
                 sugger = "two";
                 imgonesuger.setColorFilter(null);
-                imgtwosuger.setColorFilter(new PorterDuffColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP));
+                imgtwosuger.setColorFilter(new PorterDuffColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP));
                 imgthreesuger.setColorFilter(null);
                 imgnosuger.setColorFilter(null);
             }
@@ -136,7 +136,7 @@ public class Customize_Drink_Activity extends AppCompatActivity {
                 sugger = "three";
                 imgonesuger.setColorFilter(null);
                 imgtwosuger.setColorFilter(null);
-                imgthreesuger.setColorFilter(new PorterDuffColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP));
+                imgthreesuger.setColorFilter(new PorterDuffColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP));
                 imgnosuger.setColorFilter(null);
             }
         });
@@ -147,7 +147,7 @@ public class Customize_Drink_Activity extends AppCompatActivity {
                 imgonesuger.setColorFilter(null);
                 imgtwosuger.setColorFilter(null);
                 imgthreesuger.setColorFilter(null);
-                imgnosuger.setColorFilter(new PorterDuffColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP));
+                imgnosuger.setColorFilter(new PorterDuffColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP));
             }
         });
 
@@ -155,7 +155,7 @@ public class Customize_Drink_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 additions = "cream";
-                imgcream.setColorFilter(new PorterDuffColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP));
+                imgcream.setColorFilter(new PorterDuffColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP));
                 imgother.setColorFilter(null);
             }
         });
@@ -164,7 +164,7 @@ public class Customize_Drink_Activity extends AppCompatActivity {
             public void onClick(View v) {
                 additions = "other";
                 imgcream.setColorFilter(null);
-                imgother.setColorFilter(new PorterDuffColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP));
+                imgother.setColorFilter(new PorterDuffColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP));
             }
         });
 

@@ -20,9 +20,9 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             app:defaultIndicator="circle"
+            app:hideIndicators="false"
             app:imageSlideInterval="3300"
             app:layout_constraintTop_toTopOf="parent"
-            app:hideIndicators="false"
             app:loopSlides="true" />
     </LinearLayout>
 
@@ -41,7 +41,7 @@
             android:text="@string/txtgetthebestcoffeeinthetown"
             android:textColor="#8C746A"
             android:textSize="22sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -54,45 +54,31 @@
             android:id="@+id/btnregistere"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20px"
+            android:layout_marginHorizontal="20px"
             android:layout_weight="1"
-            android:text="@string/btnregistere"
             android:backgroundTint="#B98068"
+            android:text="@string/btnregistere"
             android:textColor="#000000"
-            android:textSize="14sp"/>
+            android:textSize="14sp" />
 
         <Button
             android:id="@+id/btnlogine"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20px"
+            android:layout_marginHorizontal="20px"
             android:layout_weight="1"
-            android:background="@drawable/radius2"
             android:text="@string/btnlogine"
             android:textColor="#000000"
-            android:textSize="14sp"/>
+            android:textSize="14sp" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/lyt_facebook"
-        android:layout_marginTop="20dp"
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/radius3"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:padding="15dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp">
-        <TextView
-            android:drawableLeft="@drawable/facebook_logo"
-            android:drawablePadding="6dp"
-            android:layout_marginLeft="8dp"
-            android:textSize="14sp"
-            android:textColor="#4277BC"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/connectwithfacebook"/>
-    </LinearLayout>
-
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="10dp"
+        android:paddingVertical="10dp"
+        android:layout_marginBottom="30dp" />
 </LinearLayout>
