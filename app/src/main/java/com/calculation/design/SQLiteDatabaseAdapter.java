@@ -107,9 +107,44 @@ public class SQLiteDatabaseAdapter {
         while(!cursor.isAfterLast()){
             int id = cursor.getInt(0);
             String drink_name = cursor.getString(1);
-            float price = cursor.getFloat(2);
-            Integer image = cursor.getInt(3);
-            drinks.add(new Drink(id,drink_name, price,image));
+            String type = cursor.getString(2);
+            float price = cursor.getFloat(3);
+            Integer image = cursor.getInt(4);
+            drinks.add(new Drink(id,drink_name,type, price,image));
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return drinks;
+    }
+
+    public ArrayList<Drink> getHotDrinks(){
+        ArrayList<Drink> drinks =new ArrayList<Drink>();
+        Cursor cursor = database.query("drinks", null, "type='hot'", null, null, null, null);
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast()){
+            int id = cursor.getInt(0);
+            String drink_name = cursor.getString(1);
+            String type = cursor.getString(2);
+            float price = cursor.getFloat(3);
+            Integer image = cursor.getInt(4);
+            drinks.add(new Drink(id,drink_name,type, price,image));
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return drinks;
+    }
+
+    public ArrayList<Drink> getCollDrinks(){
+        ArrayList<Drink> drinks =new ArrayList<Drink>();
+        Cursor cursor = database.query("drinks", null, "type='cool'", null, null, null, null);
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast()){
+            int id = cursor.getInt(0);
+            String drink_name = cursor.getString(1);
+            String type = cursor.getString(2);
+            float price = cursor.getFloat(3);
+            Integer image = cursor.getInt(4);
+            drinks.add(new Drink(id,drink_name,type, price,image));
             cursor.moveToNext();
         }
         cursor.close();
@@ -123,9 +158,10 @@ public class SQLiteDatabaseAdapter {
         while(!cursor.isAfterLast()){
             int id = cursor.getInt(0);
             String drink_name = cursor.getString(1);
-            float price = cursor.getFloat(2);
-            Integer image = cursor.getInt(3);
-            drinks.add(new Drink(id,drink_name, price,image));
+            String type = cursor.getString(2);
+            float price = cursor.getFloat(3);
+            Integer image = cursor.getInt(4);
+            drinks.add(new Drink(id,drink_name,type, price,image));
             cursor.moveToNext();
         }
         cursor.close();

@@ -36,7 +36,7 @@ public class Logein_Activity extends AppCompatActivity {
                             Toast.makeText(Logein_Activity.this, "Invalid user", Toast.LENGTH_LONG).show();
                         } else {
                             Toast.makeText(Logein_Activity.this, "Correct user", Toast.LENGTH_LONG).show();
-                            Intent i = new Intent(Logein_Activity.this, ListDrinksActivity.class);
+                            Intent i = new Intent(Logein_Activity.this, ChooseDrinkActivity.class);
                             startActivity(i);
                         }
                         edtyourename.setText("");

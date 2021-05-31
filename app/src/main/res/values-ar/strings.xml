@@ -24,12 +24,12 @@
     <string name="cappuccino">كابوتشينو</string>
     <string name="btnaddtocart">اضافة الى سلة المشتريات</string>
     <string name="register">إنشاء حساب</string>
-    <string name="Latte">قهوة لاتيه</string>
-    <string name="Mocha">موتشا</string>
-    <string name="Cappuccino">كابوتشينو</string>
-    <string name="Macciato">ماكياتو</string>
-    <string name="Expresso">اسبريسو</string>
-    <string name="List_Drinks">قائمة المشروبات</string>
+    <string name="latte">قهوة لاتيه</string>
+    <string name="mocha">موتشا</string>
+    <string name="macciato">ماكياتو</string>
+    <string name="expresso">اسبريسو</string>
+    <string name="list_hot_drinks">المشروبات الساخنة</string>
+    <string name="list_cool_drinks">المشروبات الباردة</string>
 
     <string name="facebook_app_id">159515252722600</string>
     <string name="fb_login_protocol_scheme">fb159515252722600</string>

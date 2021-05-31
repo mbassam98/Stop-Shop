@@ -12,20 +12,15 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.asura.library.posters.Poster;
-import com.asura.library.posters.RawVideo;
-import com.asura.library.posters.RemoteImage;
 import com.asura.library.posters.DrawableImage;
-import com.asura.library.posters.RemoteVideo;
 import com.asura.library.views.PosterSlider;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
-import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
@@ -82,7 +77,7 @@ public class Loge_activity extends AppCompatActivity {
                     public void onSuccess(LoginResult loginResult) {
                         String id = loginResult.getAccessToken().getUserId();
                         Toast.makeText(Loge_activity.this, "Id: " + id, Toast.LENGTH_SHORT).show();
-                        Intent i = new Intent(Loge_activity.this, ListDrinksActivity.class);
+                        Intent i = new Intent(Loge_activity.this, List_hot_Drinks_Activity.class);
                         startActivity(i);
                     }
 
@@ -126,7 +121,7 @@ public class Loge_activity extends AppCompatActivity {
             public void onSuccess(LoginResult loginResult) {
                 String id = loginResult.getAccessToken().getUserId();
                 Toast.makeText(Loge_activity.this, "Id: " + id, Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(Loge_activity.this, ListDrinksActivity.class);
+                Intent i = new Intent(Loge_activity.this, List_hot_Drinks_Activity.class);
                 startActivity(i);
             }
 
