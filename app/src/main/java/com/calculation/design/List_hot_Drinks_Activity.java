@@ -17,7 +17,7 @@ public class List_hot_Drinks_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_hot_drinks);
 
-        final ListView listDrinks = findViewById(R.id.listHotDrinks);
+        final ListView listHotDrinks = findViewById(R.id.listHotDrinks);
 
         SQLiteDatabaseAdapter ad = new SQLiteDatabaseAdapter(List_hot_Drinks_Activity.this);
         ad.open();
@@ -25,9 +25,9 @@ public class List_hot_Drinks_Activity extends AppCompatActivity {
         ad.close();
 
         DrinkListAdapter adapter = new DrinkListAdapter(this, drinks);
-        listDrinks.setAdapter(adapter);
+        listHotDrinks.setAdapter(adapter);
 
-        listDrinks.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listHotDrinks.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Drink d = drinks.get(position);

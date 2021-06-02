@@ -8,7 +8,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/stop_shop_logo"
+        android:icon="@drawable/coffee_coffee"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/stop_shop_logo"
         android:supportsRtl="true"
@@ -32,7 +32,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="@string/fb_login_protocol_scheme" />
+                <data android:scheme="fb159515252722600" />
             </intent-filter>
         </activity>
         <activity android:name=".Activity_list_cool_drink"></activity>
